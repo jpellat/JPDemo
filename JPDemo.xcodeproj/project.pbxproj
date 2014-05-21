@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09B51AED192D245A00E2C3BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEC192D245A00E2C3BB /* Foundation.framework */; };
+		09B51AEF192D245A00E2C3BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */; };
+		09B51AF1192D245A00E2C3BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AF0192D245A00E2C3BB /* UIKit.framework */; };
+		09B51AF7192D245A00E2C3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09B51AF5192D245A00E2C3BB /* InfoPlist.strings */; };
+		09B51AF9192D245A00E2C3BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51AF8192D245A00E2C3BB /* main.m */; };
+		09B51AFD192D245A00E2C3BB /* JPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51AFC192D245A00E2C3BB /* JPAppDelegate.m */; };
+		09B51AFF192D245A00E2C3BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B51AFE192D245A00E2C3BB /* Images.xcassets */; };
+		09B51B06192D245A00E2C3BB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51B05192D245A00E2C3BB /* XCTest.framework */; };
+		09B51B07192D245A00E2C3BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEC192D245A00E2C3BB /* Foundation.framework */; };
+		09B51B08192D245A00E2C3BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AF0192D245A00E2C3BB /* UIKit.framework */; };
+		09B51B10192D245A00E2C3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09B51B0E192D245A00E2C3BB /* InfoPlist.strings */; };
+		09B51B12192D245A00E2C3BB /* JPDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B11192D245A00E2C3BB /* JPDemoTests.m */; };
+		09B51B21192D24AF00E2C3BB /* JPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B1F192D24AF00E2C3BB /* JPLoginView.m */; };
+		09B51B22192D24AF00E2C3BB /* JPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B51B20192D24AF00E2C3BB /* JPLoginViewController.xib */; };
+		09B51B25192D24B700E2C3BB /* JPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B24192D24B700E2C3BB /* JPLoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09B51B09192D245A00E2C3BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09B51AE1192D245A00E2C3BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09B51AE8192D245A00E2C3BB;
+			remoteInfo = JPDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09B51AE9192D245A00E2C3BB /* JPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B51AEC192D245A00E2C3BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		09B51AF0192D245A00E2C3BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		09B51AF4192D245A00E2C3BB /* JPDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JPDemo-Info.plist"; sourceTree = "<group>"; };
+		09B51AF6192D245A00E2C3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09B51AF8192D245A00E2C3BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09B51AFA192D245A00E2C3BB /* JPDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPDemo-Prefix.pch"; sourceTree = "<group>"; };
+		09B51AFB192D245A00E2C3BB /* JPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPAppDelegate.h; sourceTree = "<group>"; };
+		09B51AFC192D245A00E2C3BB /* JPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPAppDelegate.m; sourceTree = "<group>"; };
+		09B51AFE192D245A00E2C3BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		09B51B04192D245A00E2C3BB /* JPDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B51B05192D245A00E2C3BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		09B51B0D192D245A00E2C3BB /* JPDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JPDemoTests-Info.plist"; sourceTree = "<group>"; };
+		09B51B0F192D245A00E2C3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09B51B11192D245A00E2C3BB /* JPDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPDemoTests.m; sourceTree = "<group>"; };
+		09B51B1E192D24AF00E2C3BB /* JPLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginView.h; sourceTree = "<group>"; };
+		09B51B1F192D24AF00E2C3BB /* JPLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginView.m; sourceTree = "<group>"; };
+		09B51B20192D24AF00E2C3BB /* JPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPLoginViewController.xib; sourceTree = "<group>"; };
+		09B51B23192D24B700E2C3BB /* JPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginViewController.h; sourceTree = "<group>"; };
+		09B51B24192D24B700E2C3BB /* JPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09B51AE6192D245A00E2C3BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B51AEF192D245A00E2C3BB /* CoreGraphics.framework in Frameworks */,
+				09B51AF1192D245A00E2C3BB /* UIKit.framework in Frameworks */,
+				09B51AED192D245A00E2C3BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B51B01192D245A00E2C3BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B51B06192D245A00E2C3BB /* XCTest.framework in Frameworks */,
+				09B51B08192D245A00E2C3BB /* UIKit.framework in Frameworks */,
+				09B51B07192D245A00E2C3BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09B51AE0192D245A00E2C3BB = {
+			isa = PBXGroup;
+			children = (
+				09B51AF2192D245A00E2C3BB /* JPDemo */,
+				09B51B0B192D245A00E2C3BB /* JPDemoTests */,
+				09B51AEB192D245A00E2C3BB /* Frameworks */,
+				09B51AEA192D245A00E2C3BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09B51AEA192D245A00E2C3BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09B51AE9192D245A00E2C3BB /* JPDemo.app */,
+				09B51B04192D245A00E2C3BB /* JPDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09B51AEB192D245A00E2C3BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B51AEC192D245A00E2C3BB /* Foundation.framework */,
+				09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */,
+				09B51AF0192D245A00E2C3BB /* UIKit.framework */,
+				09B51B05192D245A00E2C3BB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09B51AF2192D245A00E2C3BB /* JPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B1B192D248900E2C3BB /* Login */,
+				09B51AFB192D245A00E2C3BB /* JPAppDelegate.h */,
+				09B51AFC192D245A00E2C3BB /* JPAppDelegate.m */,
+				09B51AFE192D245A00E2C3BB /* Images.xcassets */,
+				09B51AF3192D245A00E2C3BB /* Supporting Files */,
+			);
+			path = JPDemo;
+			sourceTree = "<group>";
+		};
+		09B51AF3192D245A00E2C3BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09B51AF4192D245A00E2C3BB /* JPDemo-Info.plist */,
+				09B51AF5192D245A00E2C3BB /* InfoPlist.strings */,
+				09B51AF8192D245A00E2C3BB /* main.m */,
+				09B51AFA192D245A00E2C3BB /* JPDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09B51B0B192D245A00E2C3BB /* JPDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B11192D245A00E2C3BB /* JPDemoTests.m */,
+				09B51B0C192D245A00E2C3BB /* Supporting Files */,
+			);
+			path = JPDemoTests;
+			sourceTree = "<group>";
+		};
+		09B51B0C192D245A00E2C3BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B0D192D245A00E2C3BB /* JPDemoTests-Info.plist */,
+				09B51B0E192D245A00E2C3BB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09B51B1B192D248900E2C3BB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B1D192D249800E2C3BB /* ViewController */,
+				09B51B1C192D249100E2C3BB /* View */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		09B51B1C192D249100E2C3BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B1E192D24AF00E2C3BB /* JPLoginView.h */,
+				09B51B1F192D24AF00E2C3BB /* JPLoginView.m */,
+				09B51B20192D24AF00E2C3BB /* JPLoginViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		09B51B1D192D249800E2C3BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B23192D24B700E2C3BB /* JPLoginViewController.h */,
+				09B51B24192D24B700E2C3BB /* JPLoginViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09B51AE8192D245A00E2C3BB /* JPDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B51B15192D245A00E2C3BB /* Build configuration list for PBXNativeTarget "JPDemo" */;
+			buildPhases = (
+				09B51AE5192D245A00E2C3BB /* Sources */,
+				09B51AE6192D245A00E2C3BB /* Frameworks */,
+				09B51AE7192D245A00E2C3BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPDemo;
+			productName = JPDemo;
+			productReference = 09B51AE9192D245A00E2C3BB /* JPDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09B51B03192D245A00E2C3BB /* JPDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B51B18192D245A00E2C3BB /* Build configuration list for PBXNativeTarget "JPDemoTests" */;
+			buildPhases = (
+				09B51B00192D245A00E2C3BB /* Sources */,
+				09B51B01192D245A00E2C3BB /* Frameworks */,
+				09B51B02192D245A00E2C3BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09B51B0A192D245A00E2C3BB /* PBXTargetDependency */,
+			);
+			name = JPDemoTests;
+			productName = JPDemoTests;
+			productReference = 09B51B04192D245A00E2C3BB /* JPDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09B51AE1192D245A00E2C3BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jordi Pellat Massó";
+				TargetAttributes = {
+					09B51B03192D245A00E2C3BB = {
+						TestTargetID = 09B51AE8192D245A00E2C3BB;
+					};
+				};
+			};
+			buildConfigurationList = 09B51AE4192D245A00E2C3BB /* Build configuration list for PBXProject "JPDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09B51AE0192D245A00E2C3BB;
+			productRefGroup = 09B51AEA192D245A00E2C3BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09B51AE8192D245A00E2C3BB /* JPDemo */,
+				09B51B03192D245A00E2C3BB /* JPDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09B51AE7192D245A00E2C3BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B51AF7192D245A00E2C3BB /* InfoPlist.strings in Resources */,
+				09B51AFF192D245A00E2C3BB /* Images.xcassets in Resources */,
+				09B51B22192D24AF00E2C3BB /* JPLoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B51B02192D245A00E2C3BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B51B10192D245A00E2C3BB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09B51AE5192D245A00E2C3BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B51B25192D24B700E2C3BB /* JPLoginViewController.m in Sources */,
+				09B51AFD192D245A00E2C3BB /* JPAppDelegate.m in Sources */,
+				09B51B21192D24AF00E2C3BB /* JPLoginView.m in Sources */,
+				09B51AF9192D245A00E2C3BB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B51B00192D245A00E2C3BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B51B12192D245A00E2C3BB /* JPDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09B51B0A192D245A00E2C3BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09B51AE8192D245A00E2C3BB /* JPDemo */;
+			targetProxy = 09B51B09192D245A00E2C3BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09B51AF5192D245A00E2C3BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09B51AF6192D245A00E2C3BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		09B51B0E192D245A00E2C3BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09B51B0F192D245A00E2C3BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09B51B13192D245A00E2C3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09B51B14192D245A00E2C3BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09B51B16192D245A00E2C3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JPDemo/JPDemo-Prefix.pch";
+				INFOPLIST_FILE = "JPDemo/JPDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		09B51B17192D245A00E2C3BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JPDemo/JPDemo-Prefix.pch";
+				INFOPLIST_FILE = "JPDemo/JPDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		09B51B19192D245A00E2C3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JPDemo.app/JPDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JPDemo/JPDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JPDemoTests/JPDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		09B51B1A192D245A00E2C3BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JPDemo.app/JPDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JPDemo/JPDemo-Prefix.pch";
+				INFOPLIST_FILE = "JPDemoTests/JPDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09B51AE4192D245A00E2C3BB /* Build configuration list for PBXProject "JPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B51B13192D245A00E2C3BB /* Debug */,
+				09B51B14192D245A00E2C3BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09B51B15192D245A00E2C3BB /* Build configuration list for PBXNativeTarget "JPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B51B16192D245A00E2C3BB /* Debug */,
+				09B51B17192D245A00E2C3BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09B51B18192D245A00E2C3BB /* Build configuration list for PBXNativeTarget "JPDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B51B19192D245A00E2C3BB /* Debug */,
+				09B51B1A192D245A00E2C3BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09B51AE1192D245A00E2C3BB /* Project object */;
+}
