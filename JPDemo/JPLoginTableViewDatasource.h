@@ -1,8 +1,8 @@
 //
-//  JPLoginViewController.h
-//  LighterViewController
+//  JPLoginTableViewDatasource.h
+//  JPDemo
 //
-//  Created by Jordi Pellat Massó on 18/05/14.
+//  Created by Jordi Pellat Massó on 21/05/14.
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
@@ -17,8 +17,14 @@
 
 //  More information at http://jpellat.com/
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+@class JPLoginViewModel;
 
-@interface JPLoginViewController : UIViewController
+@interface JPLoginTableViewDatasource : NSObject<UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) JPLoginViewModel *loginViewModel;
+
+- (void)updateViewModelWithTableView:(UITableView *)tableView;
+- (void)setUpTableView:(UITableView *)tableView;
+- (void)resignFirstResponderForAllCellsWithTableView:(UITableView *)tableView;
 @end

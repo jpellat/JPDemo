@@ -15,6 +15,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+//  More information at http://jpellat.com/
+
 #import "JPLoginViewController.h"
 #import "JPLoginView.h"
 
@@ -45,6 +47,7 @@
     viewModel.userName = userName;
     viewModel.password = password;
     
+    // Set up the view with the view model and set up view controller as delegate
     self.loginView.viewModel = viewModel;
     self.loginView.loginViewDelegate = self;
 }
@@ -56,11 +59,24 @@
 
 - (void)didTapLoginAtLoginView:(JPLoginView *)loginView
 {
-    // Do the login
-    NSLog(@"Login...");
+    //Dummy implementation, to be changed in future posts
+    if ([self.loginView.viewModel.password length] > 0)
+    {
+        [self doLogin];
+    }
+    else
+    {
+        [self.loginView showPasswordError];
+    }
+}
+
+- (void)doLogin
+{
     [self.loginView showUserFeedback];
+    //Here you would do the login
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.loginView removeUserFeedback];
     });
+
 }
 @end

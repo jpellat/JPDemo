@@ -15,6 +15,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+/*
+ *  Description: The view isolated from the view controller
+ *  More information at http://jpellat.com/?p=18
+ */
+
 #import <UIKit/UIKit.h>
 @class JPLoginViewModel;
 @protocol JPLoginViewDelegate;
@@ -24,15 +29,28 @@
 @property (strong, nonatomic) JPLoginViewModel *viewModel;
 @property (weak, nonatomic) id<JPLoginViewDelegate> loginViewDelegate;
 
+/*
+ * Methods used by the view controller to change the view
+ */
 - (void)showUserFeedback;
 - (void)removeUserFeedback;
+- (void)showPasswordError;
 @end
 
+/*
+ * Delegate used to comunicate async events to ViewController
+ */
 @protocol JPLoginViewDelegate <NSObject>
 
 - (void)didTapLoginAtLoginView:(JPLoginView *)loginView;
 
 @end
+
+/*
+ * ViewModel used to comunicate data between view and view controller
+ * Can also be used to comunicate changes of data to View controller but in
+ *  this case it's not usefull
+ */
 
 @interface JPLoginViewModel : NSObject
 

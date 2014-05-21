@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JPLoginViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Yvk-u5-hoF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JPLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="70P-Is-aOc">
+                    <rect key="frame" x="20" y="50" width="280" height="130"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="cFN-0E-ni1"/>
+                    </constraints>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weu-jJ-PPz">
+                    <rect key="frame" x="45" y="200" width="230" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="gaV-2P-0aR"/>
+                        <constraint firstAttribute="height" constant="30" id="od3-if-Qcy"/>
+                    </constraints>
+                    <state key="normal" title="Login">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vQ4-OH-W0P"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Weu-jJ-PPz" firstAttribute="top" secondItem="70P-Is-aOc" secondAttribute="bottom" constant="20" id="bCp-CX-X7F"/>
+                <constraint firstItem="70P-Is-aOc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="h4z-Zs-KWs"/>
+                <constraint firstAttribute="centerX" secondItem="Weu-jJ-PPz" secondAttribute="centerX" id="iVB-ob-j4L"/>
+                <constraint firstAttribute="trailing" secondItem="70P-Is-aOc" secondAttribute="trailing" constant="20" id="wfT-P1-S8W"/>
+                <constraint firstItem="70P-Is-aOc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="zje-Wp-isw"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="f16-oX-4pI" id="ZjN-u8-1v5"/>
+                <outlet property="fieldsTableView" destination="70P-Is-aOc" id="D8Y-Pl-Zj5"/>
+                <outlet property="loginButton" destination="Weu-jJ-PPz" id="N0a-5Z-d4y"/>
+                <outlet property="userFeedbackView" destination="YJN-rM-8ZZ" id="XNw-Bl-dvg"/>
+            </connections>
+        </view>
+        <view contentMode="scaleToFill" id="YJN-rM-8ZZ">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="f16-oX-4pI">
+                    <rect key="frame" x="142" y="265" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.19" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

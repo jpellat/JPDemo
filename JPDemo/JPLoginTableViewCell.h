@@ -1,8 +1,8 @@
 //
-//  JPLoginViewController.h
-//  LighterViewController
+//  JPLoginTableViewCell.h
+//  JPDemo
 //
-//  Created by Jordi Pellat Massó on 18/05/14.
+//  Created by Jordi Pellat Massó on 21/05/14.
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
@@ -16,9 +16,11 @@
 //  limitations under the License.
 
 //  More information at http://jpellat.com/
-
 #import <UIKit/UIKit.h>
 
-@interface JPLoginViewController : UIViewController
+@interface JPLoginTableViewCell : UITableViewCell
+@property (readwrite) NSString *text;
+@property (readwrite) NSString *placeholder;
 
+- (void)setUpCellForPassword;
 @end
