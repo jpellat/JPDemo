@@ -17,17 +17,18 @@
 
 #import "JPLoginViewController.h"
 #import "JPLoginView.h"
-@interface JPLoginViewController ()
+
+@interface JPLoginViewController ()<JPLoginViewDelegate>
 @property (readonly) JPLoginView *loginView;
 @end
 
 @implementation JPLoginViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [self initWithNibName:@"JPLoginView" bundle:nil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -36,7 +37,7 @@
 {
     [super viewDidLoad];
     
-    NSString *userName = @""; //Retreive it from your bussiness logic
+    NSString *userName = @"Default"; //Retreive it from your bussiness logic
     NSString *password = @""; //Retreive it from your bussiness logic
     
     
@@ -45,31 +46,21 @@
     viewModel.password = password;
     
     self.loginView.viewModel = viewModel;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [self.loginView.viewModel addObserver:self forKeyPath:@"password" options:0 context:nil];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    
-    [self removeObserver:self forKeyPath:@"password"];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.loginView.loginViewDelegate = self;
 }
 
 - (JPLoginView *)loginView
 {
-    return nil;
+    return (JPLoginView *)self.view;
 }
 
+- (void)didTapLoginAtLoginView:(JPLoginView *)loginView
+{
+    // Do the login
+    NSLog(@"Login...");
+    [self.loginView showUserFeedback];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.loginView removeUserFeedback];
+    });
+}
 @end

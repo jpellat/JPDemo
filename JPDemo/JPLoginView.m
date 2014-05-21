@@ -16,29 +16,83 @@
 //  limitations under the License.
 
 #import "JPLoginView.h"
+#import "JPLoginTableViewDatasource.h"
 
-@interface JPLoginView()
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@interface JPLoginView()<UINavigationBarDelegate>
+@property (strong, nonatomic) UINavigationBar *navigationBar;
 @property (strong, nonatomic) IBOutlet UITableView *fieldsTableView;
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
-@property (strong, nonatomic) IBOutlet UIProgressView *connectionIssueProgressView;
 
+@property (strong, nonatomic) IBOutlet UIView *userFeedbackView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+
+@property (strong, nonatomic) JPLoginTableViewDatasource *fieldsDataSource;
 @end
 
 @implementation JPLoginView
 
-- (void)showAppearanceAnimation {
-
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self setUp];
 }
 
-- (void)showNoConnectionFeedback:(BOOL)shouldShow {
-
+- (void)setUp
+{
+    [self setUpNavigationBar];
+    [self setUpFieldsTableView];
 }
 
-- (void)showUserConfirmationWithCompletionBlock:(JPLoginViewConfirmationCompletion)completion {
-
+- (void)setUpNavigationBar
+{
+    self.navigationBar = [[UINavigationBar alloc] init];
+    [self.navigationBar setFrame:CGRectMake(0, 20, self.frame.size.width, 44)];
+    [self.navigationBar setBarTintColor:[UIColor lightGrayColor]];
+    [self.navigationBar setDelegate:self];
+    UINavigationItem *titleItem = [[UINavigationItem alloc] init];
+    titleItem.title = @"Login";
+    self.navigationBar.items = @[titleItem];
+    [self addSubview:self.navigationBar];
 }
 
+- (void)setUpFieldsTableView
+{
+    self.fieldsTableView.backgroundColor = [UIColor clearColor];
+    self.fieldsDataSource = [[JPLoginTableViewDatasource alloc] init];
+    [self.fieldsDataSource setUpTableView:self.fieldsTableView];
+    self.fieldsTableView.delegate = self.fieldsDataSource;
+    self.fieldsTableView.dataSource = self.fieldsDataSource;
+}
+
+- (IBAction)loginButtonTapped:(UIButton *)button
+{
+    [self.loginViewDelegate didTapLoginAtLoginView:self];
+}
+
+- (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar
+{
+    return UIBarPositionTopAttached;
+}
+
+- (void)setViewModel:(JPLoginViewModel *)viewModel
+{
+    _viewModel = viewModel;
+    self.fieldsDataSource.loginViewModel = viewModel;
+    [self.fieldsTableView reloadData];
+}
+
+- (void)showUserFeedback
+{
+    self.userFeedbackView.frame = self.bounds;
+    [self addSubview:self.userFeedbackView];
+    [self.activityIndicatorView startAnimating];
+}
+
+- (void)removeUserFeedback
+{
+    [self.activityIndicatorView stopAnimating];
+    [self.userFeedbackView removeFromSuperview];
+}
 @end
 
 @implementation JPLoginViewModel

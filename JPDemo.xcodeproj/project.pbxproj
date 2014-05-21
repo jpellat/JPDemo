@@ -20,8 +20,11 @@
 		09B51B10192D245A00E2C3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09B51B0E192D245A00E2C3BB /* InfoPlist.strings */; };
 		09B51B12192D245A00E2C3BB /* JPDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B11192D245A00E2C3BB /* JPDemoTests.m */; };
 		09B51B21192D24AF00E2C3BB /* JPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B1F192D24AF00E2C3BB /* JPLoginView.m */; };
-		09B51B22192D24AF00E2C3BB /* JPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B51B20192D24AF00E2C3BB /* JPLoginViewController.xib */; };
 		09B51B25192D24B700E2C3BB /* JPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B24192D24B700E2C3BB /* JPLoginViewController.m */; };
+		09B51B27192D298900E2C3BB /* JPLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B51B26192D298900E2C3BB /* JPLoginView.xib */; };
+		09B51B2A192D32B900E2C3BB /* JPLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B29192D32B900E2C3BB /* JPLoginTableViewCell.m */; };
+		09B51B2C192D32DD00E2C3BB /* JPLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B51B2B192D32DD00E2C3BB /* JPLoginTableViewCell.xib */; };
+		09B51B31192D359800E2C3BB /* JPLoginTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B51B30192D359800E2C3BB /* JPLoginTableViewDatasource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +56,14 @@
 		09B51B11192D245A00E2C3BB /* JPDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPDemoTests.m; sourceTree = "<group>"; };
 		09B51B1E192D24AF00E2C3BB /* JPLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginView.h; sourceTree = "<group>"; };
 		09B51B1F192D24AF00E2C3BB /* JPLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginView.m; sourceTree = "<group>"; };
-		09B51B20192D24AF00E2C3BB /* JPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPLoginViewController.xib; sourceTree = "<group>"; };
 		09B51B23192D24B700E2C3BB /* JPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginViewController.h; sourceTree = "<group>"; };
 		09B51B24192D24B700E2C3BB /* JPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginViewController.m; sourceTree = "<group>"; };
+		09B51B26192D298900E2C3BB /* JPLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPLoginView.xib; sourceTree = "<group>"; };
+		09B51B28192D32B900E2C3BB /* JPLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginTableViewCell.h; sourceTree = "<group>"; };
+		09B51B29192D32B900E2C3BB /* JPLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginTableViewCell.m; sourceTree = "<group>"; };
+		09B51B2B192D32DD00E2C3BB /* JPLoginTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPLoginTableViewCell.xib; sourceTree = "<group>"; };
+		09B51B2F192D359800E2C3BB /* JPLoginTableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginTableViewDatasource.h; sourceTree = "<group>"; };
+		09B51B30192D359800E2C3BB /* JPLoginTableViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginTableViewDatasource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +173,11 @@
 		09B51B1C192D249100E2C3BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09B51B2E192D354700E2C3BB /* Datasource */,
+				09B51B2D192D351F00E2C3BB /* Cell */,
 				09B51B1E192D24AF00E2C3BB /* JPLoginView.h */,
 				09B51B1F192D24AF00E2C3BB /* JPLoginView.m */,
-				09B51B20192D24AF00E2C3BB /* JPLoginViewController.xib */,
+				09B51B26192D298900E2C3BB /* JPLoginView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -179,6 +189,25 @@
 				09B51B24192D24B700E2C3BB /* JPLoginViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		09B51B2D192D351F00E2C3BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B28192D32B900E2C3BB /* JPLoginTableViewCell.h */,
+				09B51B29192D32B900E2C3BB /* JPLoginTableViewCell.m */,
+				09B51B2B192D32DD00E2C3BB /* JPLoginTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		09B51B2E192D354700E2C3BB /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				09B51B2F192D359800E2C3BB /* JPLoginTableViewDatasource.h */,
+				09B51B30192D359800E2C3BB /* JPLoginTableViewDatasource.m */,
+			);
+			name = Datasource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B51AF7192D245A00E2C3BB /* InfoPlist.strings in Resources */,
+				09B51B27192D298900E2C3BB /* JPLoginView.xib in Resources */,
 				09B51AFF192D245A00E2C3BB /* Images.xcassets in Resources */,
-				09B51B22192D24AF00E2C3BB /* JPLoginViewController.xib in Resources */,
+				09B51B2C192D32DD00E2C3BB /* JPLoginTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +310,9 @@
 			files = (
 				09B51B25192D24B700E2C3BB /* JPLoginViewController.m in Sources */,
 				09B51AFD192D245A00E2C3BB /* JPAppDelegate.m in Sources */,
+				09B51B31192D359800E2C3BB /* JPLoginTableViewDatasource.m in Sources */,
 				09B51B21192D24AF00E2C3BB /* JPLoginView.m in Sources */,
+				09B51B2A192D32B900E2C3BB /* JPLoginTableViewCell.m in Sources */,
 				09B51AF9192D245A00E2C3BB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

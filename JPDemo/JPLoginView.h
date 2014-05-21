@@ -19,17 +19,13 @@
 @class JPLoginViewModel;
 @protocol JPLoginViewDelegate;
 
-typedef BOOL(^JPLoginViewConfirmationCompletion)();
-
 @interface JPLoginView : UIView
 
 @property (strong, nonatomic) JPLoginViewModel *viewModel;
 @property (weak, nonatomic) id<JPLoginViewDelegate> loginViewDelegate;
 
-- (void)showAppearanceAnimation;
-- (void)showNoConnectionFeedback:(BOOL)shouldShow;
-- (void)showUserConfirmationWithCompletionBlock:(JPLoginViewConfirmationCompletion)completion;
-
+- (void)showUserFeedback;
+- (void)removeUserFeedback;
 @end
 
 @protocol JPLoginViewDelegate <NSObject>
