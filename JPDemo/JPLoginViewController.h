@@ -18,7 +18,10 @@
 //  More information at http://jpellat.com/
 
 #import <UIKit/UIKit.h>
+@class JPLoginHandler;
+@class JPLastLoginStorage;
 
 @interface JPLoginViewController : UIViewController
-
+- (id)initWithLoginHandler:(JPLoginHandler *)loginHandler
+          lastLoginStorage:(JPLastLoginStorage *)lastLoginStorage;
 @end

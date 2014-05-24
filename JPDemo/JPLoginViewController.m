@@ -19,19 +19,27 @@
 
 #import "JPLoginViewController.h"
 #import "JPLoginView.h"
+#import "JPLastLoginStorage.h"
+#import "JPLoginHandler.h"
 
 @interface JPLoginViewController ()<JPLoginViewDelegate>
 @property (readonly) JPLoginView *loginView;
+
+@property (strong, readonly, nonatomic) JPLastLoginStorage *lastLoginStorage;
+@property (strong, readonly, nonatomic) JPLoginHandler *loginHandler;
 @end
 
 @implementation JPLoginViewController
 
-- (id)init
+- (id)initWithLoginHandler:(JPLoginHandler *)loginHandler
+          lastLoginStorage:(JPLastLoginStorage *)lastLoginStorage
 {
     self = [self initWithNibName:@"JPLoginView" bundle:nil];
     if (self) {
-        
+        _loginHandler = loginHandler;
+        _lastLoginStorage = lastLoginStorage;
     }
+    
     return self;
 }
 
@@ -72,11 +80,7 @@
 
 - (void)doLogin
 {
-    [self.loginView showUserFeedback];
-    //Here you would do the login
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.loginView removeUserFeedback];
-    });
+    
 
 }
 @end
