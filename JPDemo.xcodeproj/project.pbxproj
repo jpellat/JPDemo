@@ -14,6 +14,9 @@
 		097DF4C7193159D200632B16 /* JPLastLoginStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4C6193159D200632B16 /* JPLastLoginStorage.m */; };
 		097DF4CB19315E1700632B16 /* JPLoginViewSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4CA19315E1700632B16 /* JPLoginViewSpy.m */; };
 		097DF4CF1931655800632B16 /* JPLoginHandlerFake.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4CE1931655800632B16 /* JPLoginHandlerFake.m */; };
+		097DF4D4193179B400632B16 /* JPNavigationControllerFake.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4D3193179B400632B16 /* JPNavigationControllerFake.m */; };
+		097DF4DC19317BF400632B16 /* JPSimulatePushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4DB19317BF400632B16 /* JPSimulatePushViewController.m */; };
+		097DF4DF19317C8C00632B16 /* JPSimulatePushViewCnotrollerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4DE19317C8C00632B16 /* JPSimulatePushViewCnotrollerTest.m */; };
 		09B51AED192D245A00E2C3BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEC192D245A00E2C3BB /* Foundation.framework */; };
 		09B51AEF192D245A00E2C3BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */; };
 		09B51AF1192D245A00E2C3BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AF0192D245A00E2C3BB /* UIKit.framework */; };
@@ -57,6 +60,11 @@
 		097DF4CA19315E1700632B16 /* JPLoginViewSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginViewSpy.m; sourceTree = "<group>"; };
 		097DF4CD1931655800632B16 /* JPLoginHandlerFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginHandlerFake.h; sourceTree = "<group>"; };
 		097DF4CE1931655800632B16 /* JPLoginHandlerFake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginHandlerFake.m; sourceTree = "<group>"; };
+		097DF4D2193179B400632B16 /* JPNavigationControllerFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNavigationControllerFake.h; sourceTree = "<group>"; };
+		097DF4D3193179B400632B16 /* JPNavigationControllerFake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPNavigationControllerFake.m; sourceTree = "<group>"; };
+		097DF4DA19317BF400632B16 /* JPSimulatePushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSimulatePushViewController.h; sourceTree = "<group>"; };
+		097DF4DB19317BF400632B16 /* JPSimulatePushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatePushViewController.m; sourceTree = "<group>"; };
+		097DF4DE19317C8C00632B16 /* JPSimulatePushViewCnotrollerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatePushViewCnotrollerTest.m; sourceTree = "<group>"; };
 		09B51AE9192D245A00E2C3BB /* JPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B51AEC192D245A00E2C3BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,6 +191,40 @@
 			name = Handlers;
 			sourceTree = "<group>";
 		};
+		097DF4D11931797E00632B16 /* NavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				097DF4D2193179B400632B16 /* JPNavigationControllerFake.h */,
+				097DF4D3193179B400632B16 /* JPNavigationControllerFake.m */,
+			);
+			name = NavigationViewController;
+			sourceTree = "<group>";
+		};
+		097DF4D519317A4400632B16 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				097DF4D619317A8900632B16 /* Simulate PushViewController */,
+			);
+			name = "User Details";
+			sourceTree = "<group>";
+		};
+		097DF4D619317A8900632B16 /* Simulate PushViewController */ = {
+			isa = PBXGroup;
+			children = (
+				097DF4DA19317BF400632B16 /* JPSimulatePushViewController.h */,
+				097DF4DB19317BF400632B16 /* JPSimulatePushViewController.m */,
+			);
+			name = "Simulate PushViewController";
+			sourceTree = "<group>";
+		};
+		097DF4DD19317C6D00632B16 /* SimulatePushViewController */ = {
+			isa = PBXGroup;
+			children = (
+				097DF4DE19317C8C00632B16 /* JPSimulatePushViewCnotrollerTest.m */,
+			);
+			name = SimulatePushViewController;
+			sourceTree = "<group>";
+		};
 		09B51AE0192D245A00E2C3BB = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +260,7 @@
 		09B51AF2192D245A00E2C3BB /* JPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				097DF4D519317A4400632B16 /* User Details */,
 				09B51B1B192D248900E2C3BB /* Login */,
 				09B51AFB192D245A00E2C3BB /* JPAppDelegate.h */,
 				09B51AFC192D245A00E2C3BB /* JPAppDelegate.m */,
@@ -241,6 +284,8 @@
 		09B51B0B192D245A00E2C3BB /* JPDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				097DF4D11931797E00632B16 /* NavigationViewController */,
+				097DF4DD19317C6D00632B16 /* SimulatePushViewController */,
 				097DF4BD1931555200632B16 /* Login */,
 				09B51B0C192D245A00E2C3BB /* Supporting Files */,
 			);
@@ -262,7 +307,7 @@
 				097DF4C41931598000632B16 /* Storage */,
 				097DF4B919314A2100632B16 /* Model */,
 				097DF4B51931499A00632B16 /* Handlers */,
-				09B51B1D192D249800E2C3BB /* ViewController */,
+				09B51B1D192D249800E2C3BB /* View Controller */,
 				09B51B1C192D249100E2C3BB /* View */,
 			);
 			name = Login;
@@ -280,13 +325,13 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		09B51B1D192D249800E2C3BB /* ViewController */ = {
+		09B51B1D192D249800E2C3BB /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				09B51B23192D24B700E2C3BB /* JPLoginViewController.h */,
 				09B51B24192D24B700E2C3BB /* JPLoginViewController.m */,
 			);
-			name = ViewController;
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		09B51B2D192D351F00E2C3BB /* Cell */ = {
@@ -443,6 +488,7 @@
 			files = (
 				09B51B25192D24B700E2C3BB /* JPLoginViewController.m in Sources */,
 				097DF4B8193149D400632B16 /* JPLoginHandler.m in Sources */,
+				097DF4DC19317BF400632B16 /* JPSimulatePushViewController.m in Sources */,
 				09B51AFD192D245A00E2C3BB /* JPAppDelegate.m in Sources */,
 				09B51B31192D359800E2C3BB /* JPLoginTableViewDatasource.m in Sources */,
 				097DF4BC19314A3900632B16 /* JPUser.m in Sources */,
@@ -457,6 +503,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097DF4DF19317C8C00632B16 /* JPSimulatePushViewCnotrollerTest.m in Sources */,
+				097DF4D4193179B400632B16 /* JPNavigationControllerFake.m in Sources */,
 				097DF4C3193156B000632B16 /* JPLoginViewControllerTest.m in Sources */,
 				097DF4C01931557300632B16 /* JPUserTest.m in Sources */,
 				097DF4CB19315E1700632B16 /* JPLoginViewSpy.m in Sources */,
