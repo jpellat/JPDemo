@@ -22,7 +22,7 @@
 
 static NSString * const NavigationBarTitle = @"Login";
 
-@interface JPLoginView()<UINavigationBarDelegate>
+@interface JPLoginView()<UINavigationBarDelegate, UIAlertViewDelegate>
 
 /*
  * IBOutlets setted from the .xib
@@ -34,6 +34,7 @@ static NSString * const NavigationBarTitle = @"Login";
 @property (strong, nonatomic) IBOutlet UIView *userFeedbackView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 
+@property (copy, nonatomic) void(^loginSucceedUserCompletion)();
 /*
  * Datasource used to provide the cells to the table view and also isolate
  *  the table view details
@@ -123,10 +124,43 @@ static NSString * const NavigationBarTitle = @"Login";
     [alertView show];
 }
 
+- (void)showWrongUserNameOrPassword
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Username error" message:@"Incorrect username or password" delegate:nil cancelButtonTitle:@"OKS" otherButtonTitles: nil];
+    [alertView show];
+}
+
+- (void)showUnreachableService
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"Service Unreachable" delegate:nil cancelButtonTitle:@"OKS" otherButtonTitles: nil];
+    [alertView show];
+}
+
+- (void)showLoginSucceedOnUsercompletion:(void (^)())userCompletion
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"Login Succeed!" delegate:nil cancelButtonTitle:@"OKS" otherButtonTitles: nil];
+    alertView.delegate = self;
+    self.loginSucceedUserCompletion = userCompletion;
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    self.loginSucceedUserCompletion();
+}
+
 @end
 
 @implementation JPLoginViewModel
 
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _userName = @"";
+        _password = @"";
+    }
+    return self;
+}
 
 @end

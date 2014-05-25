@@ -47,8 +47,8 @@
 {
     [super viewDidLoad];
     
-    NSString *userName = @"Default"; //Retreive it from your bussiness logic
-    NSString *password = @""; //Retreive it from your bussiness logic
+    NSString *userName = [self.lastLoginStorage getLastLogedUsername];
+    NSString *password = @"";
     
     
     JPLoginViewModel *viewModel = [[JPLoginViewModel alloc] init];
@@ -67,9 +67,8 @@
 
 - (void)didTapLoginAtLoginView:(JPLoginView *)loginView
 {
-    //Dummy implementation, to be changed in future posts
-    if ([self.loginView.viewModel.password length] > 0)
-    {
+    if (self.loginView.viewModel.password.length > 0) {
+        [self.loginView showUserFeedback];
         [self doLogin];
     }
     else
@@ -80,7 +79,46 @@
 
 - (void)doLogin
 {
-    
+    JPLoginViewModel *viewModel = self.loginView.viewModel;
 
+    __weak typeof(self) wSelf = self;
+    [self.loginHandler logWithUserName:viewModel.userName
+                          withPassword:viewModel.password
+                     succeedCompletion:^(JPUser *logedUser) {
+                         typeof(self) sSelf = wSelf;
+                         [sSelf didSucceedLoginWithUser:logedUser];
+                     }
+                        failCompletion:^(JPLoginError error) {
+                            typeof(self) sSelf = wSelf;
+                            [sSelf didFailLoginWithError:error];
+                        }];
 }
+
+- (void)didSucceedLoginWithUser:(JPUser *)user
+{
+    [self.loginView removeUserFeedback];
+    [self.loginView showLoginSucceedOnUsercompletion:^{
+        
+    }];
+}
+
+- (void)didFailLoginWithError:(JPLoginError) error
+{
+    [self.loginView removeUserFeedback];
+    
+    switch (error) {
+        case JPLoginErrorServerUnreachable:
+            [self.loginView showUnreachableService];
+            break;
+
+        case JPLoginErrorIncorrectUserOrPassword:
+            [self.loginView showWrongUserNameOrPassword];
+            break;
+
+        default:
+            break;
+    }
+    
+}
+
 @end

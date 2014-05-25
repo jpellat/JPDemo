@@ -35,6 +35,9 @@
 - (void)showUserFeedback;
 - (void)removeUserFeedback;
 - (void)showPasswordError;
+- (void)showWrongUserNameOrPassword;
+- (void)showUnreachableService;
+- (void)showLoginSucceedOnUsercompletion:(void(^)())userCompletion;
 @end
 
 /*

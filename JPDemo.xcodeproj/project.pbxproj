@@ -12,6 +12,8 @@
 		097DF4C01931557300632B16 /* JPUserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4BF1931557300632B16 /* JPUserTest.m */; };
 		097DF4C3193156B000632B16 /* JPLoginViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4C2193156B000632B16 /* JPLoginViewControllerTest.m */; };
 		097DF4C7193159D200632B16 /* JPLastLoginStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4C6193159D200632B16 /* JPLastLoginStorage.m */; };
+		097DF4CB19315E1700632B16 /* JPLoginViewSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4CA19315E1700632B16 /* JPLoginViewSpy.m */; };
+		097DF4CF1931655800632B16 /* JPLoginHandlerFake.m in Sources */ = {isa = PBXBuildFile; fileRef = 097DF4CE1931655800632B16 /* JPLoginHandlerFake.m */; };
 		09B51AED192D245A00E2C3BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEC192D245A00E2C3BB /* Foundation.framework */; };
 		09B51AEF192D245A00E2C3BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */; };
 		09B51AF1192D245A00E2C3BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B51AF0192D245A00E2C3BB /* UIKit.framework */; };
@@ -51,6 +53,10 @@
 		097DF4C2193156B000632B16 /* JPLoginViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginViewControllerTest.m; sourceTree = "<group>"; };
 		097DF4C5193159D200632B16 /* JPLastLoginStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLastLoginStorage.h; sourceTree = "<group>"; };
 		097DF4C6193159D200632B16 /* JPLastLoginStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLastLoginStorage.m; sourceTree = "<group>"; };
+		097DF4C919315E1700632B16 /* JPLoginViewSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginViewSpy.h; sourceTree = "<group>"; };
+		097DF4CA19315E1700632B16 /* JPLoginViewSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginViewSpy.m; sourceTree = "<group>"; };
+		097DF4CD1931655800632B16 /* JPLoginHandlerFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLoginHandlerFake.h; sourceTree = "<group>"; };
+		097DF4CE1931655800632B16 /* JPLoginHandlerFake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLoginHandlerFake.m; sourceTree = "<group>"; };
 		09B51AE9192D245A00E2C3BB /* JPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B51AEC192D245A00E2C3BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09B51AEE192D245A00E2C3BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,7 +132,9 @@
 		097DF4BD1931555200632B16 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				097DF4CC1931652F00632B16 /* Handlers */,
 				097DF4C11931566F00632B16 /* ViewController */,
+				097DF4C819315DCD00632B16 /* View */,
 				097DF4BE1931555900632B16 /* Model */,
 			);
 			name = Login;
@@ -155,6 +163,24 @@
 				097DF4C6193159D200632B16 /* JPLastLoginStorage.m */,
 			);
 			name = Storage;
+			sourceTree = "<group>";
+		};
+		097DF4C819315DCD00632B16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				097DF4C919315E1700632B16 /* JPLoginViewSpy.h */,
+				097DF4CA19315E1700632B16 /* JPLoginViewSpy.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		097DF4CC1931652F00632B16 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				097DF4CD1931655800632B16 /* JPLoginHandlerFake.h */,
+				097DF4CE1931655800632B16 /* JPLoginHandlerFake.m */,
+			);
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 		09B51AE0192D245A00E2C3BB = {
@@ -433,6 +459,8 @@
 			files = (
 				097DF4C3193156B000632B16 /* JPLoginViewControllerTest.m in Sources */,
 				097DF4C01931557300632B16 /* JPUserTest.m in Sources */,
+				097DF4CB19315E1700632B16 /* JPLoginViewSpy.m in Sources */,
+				097DF4CF1931655800632B16 /* JPLoginHandlerFake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
