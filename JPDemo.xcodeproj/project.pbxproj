@@ -140,10 +140,10 @@
 		097DF4BD1931555200632B16 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				097DF4BE1931555900632B16 /* Model */,
 				097DF4CC1931652F00632B16 /* Handlers */,
 				097DF4C11931566F00632B16 /* ViewController */,
 				097DF4C819315DCD00632B16 /* View */,
-				097DF4BE1931555900632B16 /* Model */,
 			);
 			name = Login;
 			sourceTree = "<group>";

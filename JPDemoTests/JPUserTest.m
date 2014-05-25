@@ -1,6 +1,5 @@
 //
 //  JPDemo - JPUserTest.m
-//  Copyright 2014 Jordi Pellat Massó. All rights reserved.
 //
 //  Created by: Jordi Pellat Massó
 //
